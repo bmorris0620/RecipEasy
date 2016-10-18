@@ -1,10 +1,7 @@
 class PagesController < ApplicationController
-  def login
-  end
-
-  def register
-  end
-
   def home
   end
+
+  before_action :require_user, only: [:index, :show]
+  
 end
