@@ -226,8 +226,13 @@ footer{
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
+        <% if current_user %> 
+    <li>Welcome, <strong><%= current_user.username %></strong></li> 
+    <li><%= link_to "Log Out", logout_path, method: "delete" %></li> 
+<% else %> 
         <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
   <li><a href="/register"><span class="glyphicon glyphicon-log-in"></span> Register</a></li>
+<% end %>
       </ul>
     </div>
   </div>
