@@ -20,6 +20,8 @@ Rails.application.routes.draw do
 	get 'home' => 'pages#home'
 
 	resources :users
+	
+	get '/pages/search_results' => 'pages#search_results'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
