@@ -1,8 +1,8 @@
 <div class="jumbotron text-center">
   <h1>Recipe Generator </h1>
   <p>This website lets you make your own recipes with the ingredients you have in your own house!</p>
-  <form class="form-inline">
-    <input type="email" class="form-control" size="50">
+  <form class="form-inline" action='/pages/search_results' method='GET'>
+    <input type="text" class="form-control" name="ingredients" id="ingredients" size="50" placeholder="chicken,eggs,tomatoes">
     <button type="button" class="btn btn-primary">Search</button>
   </form>
 </div>
