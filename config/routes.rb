@@ -6,18 +6,24 @@ Rails.application.routes.draw do
 
   get 'pages/login'
 
-  get 'pages/register'
+  
 
   get 'pages/home'
+  
+  
 
 	get 'login' => 'sessions#new'
 	resources :sessions
 	post 'login' => 'sessions#create'
 	delete 'logout' => 'sessions#destroy'
 
-	get 'register' => 'users#new'
+	get 'register' => 'pages#register'
 
 	get 'home' => 'pages#home'
+	
+	get 'contact'=>'pages#contact'
+	get 'userprofile' =>'pages#userprofile'
+	get 'results'=>'pages#results'
 
 	resources :users
 	
