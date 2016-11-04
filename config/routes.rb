@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'recipes/search'
+
+  get 'recipes/show'
+
   get 'sessions/new'
 
   get 'users/new'
@@ -24,6 +28,8 @@ Rails.application.routes.draw do
 	get 'contact'=>'pages#contact'
 	get 'userprofile' =>'pages#userprofile'
 	get 'results'=>'pages#results'
+
+	get '/' => 'pages#home'
 
 	resources :users
 	

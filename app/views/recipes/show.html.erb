@@ -1,0 +1,43 @@
+ <% this_recipe = @recipe %>
+ <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+    </div>
+
+  </div>
+<div class="container-fluid bg-grey" style="text-align:center">
+<h1><%= this_recipe["title"] %></strong></h1>
+<% if (this_recipe.nil? or this_recipe == []) %>
+<p> <h2><strong>Sorry</b>, that recipe doesn't exist.</h2></p>
+<% else %>
+<center><div class="recipebox" style="padding:20px;margin:10px; border:1px solid orange; background:white;width:75%">
+	<div class="row">
+<div class="col-md-6">
+ 	<p><%= link_to(image_tag(this_recipe["image_url"], height: '400', width: '400'), this_recipe["source_url"])%><br/>
+(<%= link_to("View Recipe Source", this_recipe["source_url"]) %>)</p>
+</div>
+<div class="col-md-6">
+<h2>Ingredients:</h2>
+<% ingredients = this_recipe["ingredients"] %>
+ <% ingredients.each do |i| %>
+ &#0149; <%= i %> <br/>
+ <% end %>
+
+<p>
+Save to Favorites<br/>
+Rate This Recipe</p>
+
+</div>
+
+
+ <% end %>
+</center>
+</div>
+</div>
+
+    </div>

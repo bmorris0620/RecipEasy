@@ -18,6 +18,8 @@ gem 'coffee-rails', '~> 4.2'
 
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
+gem 'httparty'
+gem 'food2fork'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

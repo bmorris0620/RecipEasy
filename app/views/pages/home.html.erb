@@ -1,9 +1,11 @@
 <div class="jumbotron text-center">
   <h1>RecipEasy </h1>
   <p>This website lets you make your own recipes with the ingredients you have in your own house!</p>
-  <form class="form-inline" action='/pages/search_results' method='GET'>
-    <input type="text" class="form-control" name="ingredients" id="ingredients" size="50" placeholder="chicken,eggs,tomatoes">
-    <button type="button" class="btn btn-primary">Search</button>
+
+  <small>Please enter one or more ingredients separated by commas.</small><br/>
+  <form class="form-inline" action='/recipes/search' method='GET'>
+     <%= text_field_tag :ingredient, nil, :placeholder => 'chicken, cheese, lettuce...', :class => 'form-control' %>
+    <%= submit_tag "Search", :class => 'btn btn-primary' %>
   </form>
 </div>
 
