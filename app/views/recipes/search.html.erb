@@ -1,0 +1,27 @@
+ <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+    </div>
+
+  </div>
+<div class="container-fluid bg-grey" style="text-align:center">
+
+<h1>Results for: <strong><%= @search_term %></strong></h1>
+<% if (@recipes.nil? or @recipes == []) %>
+<p> <h2><strong>Sorry</b>, we couldn't find any recipes.</h2></p>
+<% else %>
+
+ <% @recipes.each do |course| %>
+ <center><div class="recipebox" style="padding:20px;margin:10px; border:1px solid orange; background:white;width:75%">
+ 	<a href="/recipes/show?id=<%= course["recipe_id"] %>"><img src="<%= course["image_url"] %>" width="250" height="250"></a><br/>
+<h3><%= link_to(course["title"], course["f2f_url"]) %></h3>
+</div>
+ <% end %>
+<% end %></center>
+
+    </div>
