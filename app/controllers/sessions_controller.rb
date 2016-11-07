@@ -18,4 +18,7 @@ def destroy
   redirect_to '/login' 
 end
 
+def profile
+end
+
 end

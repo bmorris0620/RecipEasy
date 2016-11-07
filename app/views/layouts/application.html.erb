@@ -227,12 +227,13 @@ footer{
 
       <ul class="nav navbar-nav navbar-right">
         <% if current_user %> 
-    <li>Welcome, <strong><%= current_user.username %></strong></li> 
+    <li><big><big><big>Welcome, <strong><%= current_user.fname %></strong>!</big></big></big></li> 
+    <li><a href="/profile"><span class="glyphicon glyphicon-user"></span>My Profile</a></li>
+    <li><a href="/browse"><span class="glyphicon glyphicon-file"></span> Browse Recipes</a></li>
     <li><%= link_to "Log Out", logout_path, method: "delete" %></li> 
 <% else %> 
-		<li><a href="/userprofile"><span class="glyphicon glyphicon-user"></span>User Profile</a></li>
-		<li><a href="/results"><span class="glyphicon glyphicon-file"></span> Result</a></li>
-        <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+<li><a href="/browse"><span class="glyphicon glyphicon-file"></span> Result</a></li>
+        <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Browse Recipes</a></li>
 		<li><a href="/register"><span class="glyphicon glyphicon-log-in"></span> Register</a></li>
 <% end %>
       </ul>

@@ -4,30 +4,31 @@ Rails.application.routes.draw do
 
   get 'recipes/show'
 
+  get 'recipes/browse'
+
   get 'sessions/new'
 
   get 'users/new'
 
   get 'pages/login'
 
-  
+  get 'sessions/profile'
 
   get 'pages/home'
-  
-  
+ 
 
 	get 'login' => 'sessions#new'
+	get 'profile' => 'sessions#profile'
 	resources :sessions
 	post 'login' => 'sessions#create'
 	delete 'logout' => 'sessions#destroy'
 
-	get 'register' => 'pages#register'
+	get 'register' => 'users#new'
 
 	get 'home' => 'pages#home'
 	
 	get 'contact'=>'pages#contact'
-	get 'userprofile' =>'pages#userprofile'
-	get 'results'=>'pages#results'
+	get 'browse'=>'recipes#browse'
 
 	get '/' => 'pages#home'
 
