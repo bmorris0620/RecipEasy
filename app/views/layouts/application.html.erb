@@ -202,6 +202,11 @@
 footer{
     text-align: center;
   }
+  
+  .glyphicon.glyphicon-cutlery {
+    font-size: 200px;
+	color:#ff3300;
+}
   	
   </style>
   </head>
@@ -232,8 +237,8 @@ footer{
     <li><a href="/browse"><span class="glyphicon glyphicon-file"></span> Browse Recipes</a></li>
     <li><%= link_to "Log Out", logout_path, method: "delete" %></li> 
 <% else %> 
-<li><a href="/browse"><span class="glyphicon glyphicon-file"></span> Result</a></li>
-        <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Browse Recipes</a></li>
+
+        <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span>Log-in</a></li>
 		<li><a href="/register"><span class="glyphicon glyphicon-log-in"></span> Register</a></li>
 <% end %>
       </ul>
