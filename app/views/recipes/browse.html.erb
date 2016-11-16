@@ -9,15 +9,20 @@
     </div>
     
   </div>
+  
+<div visibility: hidden> 
+	var random = [];
+
+		for (var i = 0; i < 5; i++) {
+
+     		random.push(Math.floor(Math.random() * 900) + 100);
+		}
+</div>
 
 <div class="container-fluid bg-grey" style="text-align:center">
 	<h1>Random Recipes</h1>
 	
-	<!-- Trying to rework search function from search.html
-	
-	May need to define new method? 
-	
-	<% @recipe.each do |course| %>
+	<% @rand_recipes.each do |course| %>
  	<center><div class="recipebox" style="padding:20px;margin:10px; border:2px solid orange; background:white;width:75%">
  	<a href="/recipes/show?id=<%= course["recipe_id"] %>">
  	<img src="<%= course["image_url"] %>" width="450px" height="350px">
@@ -26,4 +31,3 @@
 	</div>
 	<% end %></center>
 		
-	-->
