@@ -14,14 +14,14 @@ default: &default
   encoding: utf8
   pool: 5
   username: root
-  password: rootroot1E
+  password: 
   host: localhost
 
 development:
   <<: *default
   database: RecipeGenerator
   username: root
-  password: rootroot1E
+  password: 
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
@@ -31,7 +31,7 @@ test:
   <<: *default
   database: RecipeGenerator
   username: root
-  password: rootroot1E
+  password: 
   host: localhost
 
 # As with config/secrets.yml, you never want to store sensitive information,
@@ -57,7 +57,7 @@ production:
   <<: *default
   database: RecipeGenerator
   username: root
-  password: rootroot1E
+  password: 
 
 
 

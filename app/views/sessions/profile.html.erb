@@ -21,8 +21,8 @@
 		  <%= image_tag('blank-profile.png', style: "height: 100px; width: 100px") %>
         </div>
         <div class="w3-container">
-          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"><%= current_user.fname %><%= current_user.lname %>
-          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>ex@mail.com</p>
+          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"><%= current_user.fname %>&nbsp;<%= current_user.lname %>
+          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i><%= current_user.email %></p>
           <hr>
 
           

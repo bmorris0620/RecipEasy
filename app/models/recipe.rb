@@ -17,6 +17,11 @@ class Recipe
     #show method
     def self.find term
     	get('/get', query: { rId: term }) ["recipe"]
-end
+	end
+	
+	def self.browse term
+		get('/browse', query: { q: term }) ["recipes"]#random number
+	end
+
 
 end
