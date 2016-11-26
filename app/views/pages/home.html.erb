@@ -27,60 +27,22 @@
   </div>
 </div>
 
-
-
-
-
 <div id="portfolio" class="container-fluid text-center ">
-  <h2>Recipes!</h2><br>
+  <h2>Recipes!</h2>
   <h4>Lets take a look at what has been created!</h4>
-  <div class="row text-center slideanim">
-    <div class="col-sm-4">
-      
-  		
-     p><strong>Sample Text</strong></p>
-      </div>
-    </div>
-    
-      <div class="col-sm-2">
-      <%= image_tag('food.jpg', style: "height: 225px; width: 225px") %>
-        <p><strong>Feast</strong></p>
-  </div>
-  
-      <div class="col-sm-2">
-        <%= image_tag('chicken.jpg', style: "height: 225px; width: 225px") %>
-        <p><strong>Chicken Parm</strong></p>
-		</div>
-		
-		<div class="col-sm-2">
-		 <%= image_tag('fish.jpg', style: "height: 225px; width: 225px") %>
-        <p><strong>Fish Tacos</strong></p>
-		</div>
-		
-		<div class="col-sm-2">
-      <%= image_tag('sweetp.png', style: "height: 225px; width: 225px") %>
-        <p><strong>Sweet Potato Fries</strong></p>
-         </div>
-		 
-  <div class="col-sm-2">
-      <%= image_tag('cucumbertuna.png', style: "height: 225px; width: 225px") %>
-        <p><strong>Cucumber Tuna</strong></p>
-     </div>
-	 
-  <div class="col-sm-2">
-      <%= image_tag('tomato.png', style: "height: 225px; width: 225px") %>
-        <p><strong>Tomato</strong></p>
-          </div>
-		  
-		</div>
-      </div>
-    </div>
-  </div><br>
+    <%= image_tag("food.jpg", :alt => "food", style: "height: 225px; width: 225px") %>
+    <%= image_tag("fish.jpg", :alt => "fish", style: "height: 225px; width: 225px") %>
+    <%= image_tag("chicken.jpg", :alt => "chicken", style: "height: 225px; width: 225px") %>  
+		<%= image_tag("cucumbertuna.png", :alt => "cucumbertuna", style: "height: 225px; width: 225px") %> 
+		<%= image_tag("sweetp.png", :alt => "sweetp", style: "height: 225px; width: 225px") %> 
+    <%= image_tag("tomato.png", :alt => "tomato", style: "height: 225px; width: 225px") %>
+    <%= image_tag("bacongua.png", :alt => "bacongua", style: "height: 225px; width: 225px") %>
+    <%= image_tag("chickegg.png", :alt => "chickegg", style: "height: 225px; width: 225px") %>
+</div>
   
   <div class="container-fluid text-center bg-grey">
   <div class="container">
   <h2>What our customers say</h2>
-
   <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
     
     <ol class="carousel-indicators">
