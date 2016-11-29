@@ -8,7 +8,22 @@
     </div>
 
   </div>
-
+  
+<script>
+		function save() {
+			document.getElementById("about").hidden = true;
+			document.getElementById("save").hidden = true;
+			document.getElementById("edit").hidden = false;
+			document.getElementById("box").textContent = document.getElementById("about").value;
+			document.getElementById("box").hidden = false;
+		}
+		function edit(){
+		    document.getElementById("about").hidden = false;
+			document.getElementById("save").hidden = false;
+			document.getElementById("edit").hidden = true;
+			document.getElementById("box").hidden = true;
+		}
+</script>		
 <div class="container w3-content w3-margin-top" style="max-width:1400px;">
    <div class="w3-row-padding" style="margin:0 -16px">
 	
@@ -23,8 +38,9 @@
         <div class="w3-container">
           <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"><%= current_user.fname %>&nbsp;<%= current_user.lname %>
           <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i><%= current_user.email %></p>
-          <p ></br>About me: </br><textarea rows="4" cols="50"></textarea></p>
-          <button>Save</button>
+          <p style="font-style:normal"></br>About me: </br><textarea id="about" rows="4" cols="50"></textarea></p>
+          <p><div id="box" style="font-style:normal; width:422px" hidden="true">This text is enclosed in a box</div></p>
+          <p style="font-style:normal"><button id="save" onclick="save();">Save</button><button hidden="true" id="edit" onclick="edit();">Edit</button></p>
           <hr>
 
           
