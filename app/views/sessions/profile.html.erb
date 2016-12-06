@@ -23,9 +23,21 @@
         <div class="w3-container">
           <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"><%= current_user.fname %>&nbsp;<%= current_user.lname %>
           <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i><%= current_user.email %></p>
-          <p ></br>About me: </br><textarea rows="4" cols="50"></textarea></p>
+          <p ></br><strong>About me: </strong></br><textarea rows="4" cols="50"></textarea></p>
+
           <button>Save</button>
           <hr>
+
+         <strong>My Favorites</b>:<br/>
+          <% @user_favorite.each do |fave| %>
+          <span style="padding:20px">
+          <% fave_id = fave.recipe %>
+          <% @recipe = Recipe.find(fave_id) %>
+           <% this_recipe = @recipe %>
+           <%= link_to(image_tag(this_recipe["image_url"], height: '200', width: '200'), this_recipe["source_url"])%>
+          <%= this_recipe["title"] %><br/>
+         </span>
+          <% end %>
 
           
     <!-- End Left Column -->

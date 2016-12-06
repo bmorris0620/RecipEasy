@@ -19,6 +19,9 @@ def destroy
 end
 
 def profile
+  @user_favorite = Favorite.where(user: current_user.id)
+  @ids = @user_favorite
+  @faves = Recipe.for(@ids)
 end
 
 end

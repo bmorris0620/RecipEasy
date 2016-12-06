@@ -1,4 +1,5 @@
  <% this_recipe = @recipe %>
+
  <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle">
@@ -26,11 +27,12 @@
 <% ingredients = this_recipe["ingredients"] %>
  <% ingredients.each do |i| %>
  &#0149; <%= i %> <br/>
- <% end %>
+ <% end %><br/><br/>
 
 <p>
-Save to Favorites<br/>
-Rate This Recipe</p>
+<%= link_to("<button type='submit' class='btn btn-default btn-lg'>Add to Favorites</button>".html_safe, "/add?id=" + this_recipe["recipe_id"].to_s) %><br/>
+<%= link_to("<button type='submit' class='btn btn-default btn-lg'>Remove from Favorites</button>".html_safe, "/favorites/destroy?id=" + this_recipe["recipe_id"].to_s) %><br/>
+</p>
 
 </div>
 
