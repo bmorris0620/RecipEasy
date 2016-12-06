@@ -10,30 +10,30 @@
   </div>
   
 <script>
-		function save() {
-			document.getElementById("about").hidden = true;
-			document.getElementById("save").hidden = true;
-			document.getElementById("edit").hidden = false;
-			document.getElementById("box").textContent = document.getElementById("about").value;
-			document.getElementById("box").hidden = false;
-		}
-		function edit(){
-		    document.getElementById("about").hidden = false;
-			document.getElementById("save").hidden = false;
-			document.getElementById("edit").hidden = true;
-			document.getElementById("box").hidden = true;
-		}
-</script>		
+    function save() {
+      document.getElementById("about").hidden = true;
+      document.getElementById("save").hidden = true;
+      document.getElementById("edit").hidden = false;
+      document.getElementById("box").textContent = document.getElementById("about").value;
+      document.getElementById("box").hidden = false;
+    }
+    function edit(){
+        document.getElementById("about").hidden = false;
+      document.getElementById("save").hidden = false;
+      document.getElementById("edit").hidden = true;
+      document.getElementById("box").hidden = true;
+    }
+</script>   
 <div class="container w3-content w3-margin-top" style="max-width:1400px;">
    <div class="w3-row-padding" style="margin:0 -16px">
-	
-	<div class="w3-white w3-text-grey w3-card-4">
-	 <div class="w3-display-container"
-	
-	<div class="w3-display-bottomleft w3-container w3-text-black">
+  
+  <div class="w3-white w3-text-grey w3-card-4">
+   <div class="w3-display-container"
+  
+  <div class="w3-display-bottomleft w3-container w3-text-black">
             <h1><%= current_user.username %></strong></h1>
           </div>
-		  <%= image_tag('blank-profile.png', style: "height: 100px; width: 100px") %>
+      <%= image_tag('blank-profile.png', style: "height: 100px; width: 100px") %>
         </div>
         <div class="w3-container">
           <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"><%= current_user.fname %>&nbsp;<%= current_user.lname %>
@@ -42,6 +42,17 @@
           <p><div id="box" style="font-style:normal; width:422px" hidden="true">This text is enclosed in a box</div></p>
           <p style="font-style:normal"><button id="save" onclick="save();">Save</button><button hidden="true" id="edit" onclick="edit();">Edit</button></p>
           <hr>
+
+         <strong>My Favorites</b>:<br/>
+          <% @user_favorite.each do |fave| %>
+          <span style="padding:20px">
+          <% fave_id = fave.recipe %>
+          <% @recipe = Recipe.find(fave_id) %>
+           <% this_recipe = @recipe %>
+           <%= link_to(image_tag(this_recipe["image_url"], height: '200', width: '200'), this_recipe["source_url"])%>
+          <%= this_recipe["title"] %><br/>
+         </span>
+          <% end %>
 
           
     <!-- End Left Column -->

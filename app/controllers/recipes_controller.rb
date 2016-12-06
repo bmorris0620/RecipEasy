@@ -13,5 +13,10 @@ class RecipesController < ApplicationController
   	@rand_num = params[:random]
     @rand_recipes = Recipe.for(@rand_num)
   end
+
+  def faves
+    @ids = @recipes
+    @faves = Recipe.for(@ids)
+  end
   
 end

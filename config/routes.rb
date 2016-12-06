@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :favorites
   get 'recipes/search'
 
   get 'recipes/show'
@@ -15,7 +16,10 @@ Rails.application.routes.draw do
   get 'sessions/profile'
 
   get 'pages/home'
- 
+
+  get 'add' => 'favorites#new'
+
+  get 'favorites/success'
 
 	get 'login' => 'sessions#new'
 	get 'profile' => 'sessions#profile'

@@ -1,0 +1,7 @@
+ <% this_recipe = @recipe %>
+
+<h1> <%= current_user.fname %>, would you like to add  <% this_recipe["title"] %> to your favorites?</h1>
+
+<%= render 'form', favorite: @favorite %>
+
+<%= link_to 'Back', favorites_path %>

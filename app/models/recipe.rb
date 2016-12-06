@@ -23,5 +23,9 @@ class Recipe
 		get('/browse', query: { q: term }) ["recipes"]
 	end
 
+    def self.faves term
+        get('/get', query: { rId: term }) ["recipes"]
+    end
+
 
 end
