@@ -20,7 +20,7 @@ class Recipe
 	end
 	
 	def self.browse term
-		get('/browse', query: { q: term }) ["recipes"]#random number
+		get('/browse', query: { q: term }) ["recipes"]
 	end
 
     def self.faves term
