@@ -49,17 +49,13 @@
           <% fave_id = fave.recipe %>
           <% @recipe = Recipe.find(fave_id) %>
            <% this_recipe = @recipe %>
-           <%= link_to(image_tag(this_recipe["image_url"], height: '200', width: '200'), this_recipe["source_url"])%>
-          <%= this_recipe["title"] %><br/>
+           <a href="/recipes/show?id=<%= fave_id %>">
+  <img src="<%= this_recipe["image_url"] %>" width="200x" height="200px">
+  </a>
          </span>
           <% end %>
 
-          
-    <!-- End Left Column -->
-    </div>
-
-    <!-- Right Column -->
-    <div class="w3-twothird">
+          <hr/>
     
 
 </div>
